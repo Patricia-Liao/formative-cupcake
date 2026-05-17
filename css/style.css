@@ -1,6 +1,196 @@
+:root {
+    --cherrybrown: #5E231C;
+    --yellow: #EBDD5A;
+    --pink: #F6CBC4; 
+    --bgcolour: #F4E3C7; 
+    --offwhite: #F7F1E3; 
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bgcolour);
+}
+a {
+    text-decoration: none;
+    color: var(--yellow)
+}
+a:hover {
+    color: var(--pink);
+    border: var(--pink) solid 2px;
+    padding: 10px;
+}
+.logo-hover:hover{
+    border: none;
+    padding: 0;
+}
+
+
+button {
+    background-color: var(--yellow);
+    padding: 12px 34px;
+    border: 2px solid var(--cherrybrown);
+    color: var(--cherrybrown);
+    font-size: 1.5rem;
+    max-width: 250px;
+}
+button:hover{
+    background-color: var(--pink);
+}
+
+/* NAVIGATION */
+
+header {
+    background-color: var(--cherrybrown);
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 148px;
+    padding: 20px 40px;
+}
+header div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-icon {
+    display: none;
+}
+
+
+#flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#flex li {
+    list-style: none;
+    color: var(--yellow);
+    font-size: 1.5rem;
+    padding: 20px;
+}
+
+
+
+/* HOME PAGE */
+
+/* TYPOGRAPHY */
+h1 {
+    color: var(--cherrybrown);
+    font-size: 4rem;
+}
+.h1-white {
+    background-color: var(--offwhite);
+    border: var(--cherrybrown) solid 2px;
+    padding: 15px 51px;
+    display: inline-flex;
+}
+h3 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+p {
+    font-size: 1.5rem;
+}
+/* CUPCAKES PAGE */
+
+.short-description {
+    display: block;
+    padding-top: 200px;
+    text-align: center;
+}
+
+.cupcakes-menu {
+    padding: 200px;
+    display: flex;
+    gap: 210px;
+    flex-wrap: wrap;
+    justify-content: space-evenly
+}
+
+.cupcakes-indi {
+    display: flex;
+    flex-direction: column;
+    width: 393px;
+}
+
+.cupcake-image {
+    background-color: var(--yellow);
+    border-radius: 50px;
+    border: solid 2px var(--cherrybrown);
+    width: 550px;
+    height:340px;
+    align-self: center;
+}
+.cupcake-image:hover{
+    background-color: var(--pink);
+}
+
+.cupcake-image img {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
+}
+.cupcake-description {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    max-height: 150px;
+}
+.filler {
+    text-align: center;
+    margin: 150px;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--pink);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-button {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-list li{
+    color: var(--cherrybrown);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
 /* MEDIA QUERIES */
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1066px) {
 
     /*SCREEN WIDER THAN 768px */
+.primary-navigation {
+    display: none;
+}
+.menu-icon {
+    display: block;
+}
+
 }
