@@ -19,6 +19,12 @@ a {
     text-decoration: none;
     color: var(--yellow)
 }
+.a-brown {
+    color: var(--cherrybrown);
+}
+.a-brown:hover {
+    color: var(--cherrybrown);
+}
 a:hover {
     color: var(--pink);
     border: var(--pink) solid 2px;
@@ -28,6 +34,11 @@ a:hover {
     border: none;
     padding: 0;
 }
+
+section {
+    width: 100%;
+}
+
 
 
 button {
@@ -42,6 +53,9 @@ button:hover{
     background-color: var(--pink);
 }
 
+section {
+    width: 100%;
+}
 /* NAVIGATION */
 
 header {
@@ -78,17 +92,101 @@ header div {
 
 
 /* HOME PAGE */
+.hero, .reviews {
+    /* text-align: center;8=*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    min-height: 100vh;
+    padding: 100px;
+    text-align: center;
+}
+.hero img {
+    max-width: 100%;
+    object-fit: contain;
+}
+.welcoming, .deliver {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    background-color: var(--pink);
+    min-height: 100vh;
+}
+.deliver{
+    background-color: var(--bgcolour);
+}
+.deliver img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.welcome-message, .deliver div {
+    display: flex;
+    flex-direction: column;
+    /* padding: 200px; */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.cup{
+    background-image: url(/assets/welcoming-cupcake.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%
+}
+.bestseller {
+    background-color: var(--cherrybrown);
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px;
+    align-items: center;
+    gap: 50px;
+}
+.featured-cupcake {
+    background-image: url(/assets/featured-cupcake.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    color: var(--yellow);
+    height: 100%;
+}
+.featured-cupcake-content {
+display: flex;
+padding: 50px;
+flex-direction: column;
+align-items: center;
+}
+.reviews {
+background-color: var(--yellow);
+}
 
 /* TYPOGRAPHY */
 h1 {
     color: var(--cherrybrown);
     font-size: 4rem;
+    margin: 0;
 }
 .h1-white {
     background-color: var(--offwhite);
     border: var(--cherrybrown) solid 2px;
     padding: 15px 51px;
     display: inline-flex;
+}
+.h1-yellow {
+    color: var(--yellow);
+    font-weight: 200;
+    border: var(--yellow) solid 2px;
+    padding: 15px 51px;
+
+}
+h2 {
+    font-size: 3rem;
+    margin: 0;
 }
 h3 {
     font-size: 2.5rem;
@@ -148,13 +246,17 @@ p {
     text-align: center;
     margin: 150px;
 }
+.filler img {
+    max-width: 100%;
+}
 
 /* FOOTER */
+
 footer {
     background-color: var(--pink);
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+    display: block;
+    padding: 50px;
 }
 
 .footer-container {
@@ -166,6 +268,9 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+.footer-button img {
+    max-width: 100%;
 }
 .footer-list{
     display: flex;
@@ -193,4 +298,29 @@ footer {
     display: block;
 }
 
+.welcoming {
+    background-color: var(--pink);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.welcoming, .deliver {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.footer-container {
+    flex-direction: column;
+    gap: 40px;
+}
+.hero {
+    padding: 10px;
+}
+
+@media screen and (max-width: 1314px) {
+
+.welcome-message {
+    padding: 100px
+}
+}
 }
