@@ -78,7 +78,16 @@ header div {
 .menu-icon {
     display: none;
 }
-
+.side-menu {
+    display: none;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 50;
+}
 
 #flex {
     display: flex;
@@ -328,13 +337,75 @@ footer {
 
 @media screen and (max-width: 1066px) {
 
-    /*SCREEN WIDER THAN 768px */
+
+/* MOBILE SIDE MENU */
+ 
+
+ 
+.side-menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 260px;
+  height: 100%;
+  background-color: var(--cherrybrown);
+  z-index: 100;
+  padding: 30px 24px;
+  transition: right 0.3s ease;
+}
+ 
+.side-menu.open {
+  right: 0;
+}
+ 
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+ 
+.side-menu ul li {
+  border-bottom: 1px solid rgba(235, 221, 90, 0.2);
+}
+ 
+.side-menu ul li a {
+  display: block;
+  padding: 16px 0;
+  color: var(--yellow);
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+ 
+.side-menu ul li a:hover {
+  color: var(--pink);
+  border: none;
+  padding: 16px 0;
+}
+ 
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--yellow);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  max-width: fit-content;
+}
+ 
+.close-btn:hover {
+  background: none;
+  color: var(--pink);
+}
+
+
 .primary-navigation {
     display: none;
 }
 .menu-icon {
     display: block;
 }
+
 
 .welcoming {
     background-color: var(--pink);

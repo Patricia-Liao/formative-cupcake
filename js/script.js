@@ -1,8 +1,12 @@
-function myFunction() {
-  var x = document.getElementById("flex");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
+
+
+function openMenu() {
+  document.getElementById('sideMenu').classList.add('open');
+  document.getElementById('overlay').style.display = 'block';
 }
+
+function closeMenu() {
+  document.getElementById('sideMenu').classList.remove('open');
+  document.getElementById('overlay').style.display = 'none';
+}
+

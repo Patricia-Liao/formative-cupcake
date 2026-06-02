@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
 
@@ -12,7 +13,7 @@
     <header>
     <div>
       <a class="logo-hover" href="index.html"><img class="logo" src="assets/CUPoCAKE-nav.png"></a>
-      <img class="menu-icon" src="assets/material-symbols-light_menu.png" alt="menu">
+      <img class="menu-icon" src="assets/material-symbols-light_menu.png" alt="menu" onclick="openMenu()">
     
 
     <nav class="primary-navigation">
@@ -26,6 +27,20 @@
 
     
     </nav>
+    <!-- MOBILE SIDE MENU -->
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<nav class="side-menu" id="sideMenu">
+  <button class="close-btn" onclick="closeMenu()">✕</button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="cupcakes.html">Our Cupcakes</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+</nav>
+<!-- MOBILE SIDE MENU -->
+
   </header>
 <!-- NAVIGATION -->
 
@@ -76,7 +91,7 @@ We call it cupcake reform.</p>
 
   </section>
   <section>
-    
+
   </section>
 
 
